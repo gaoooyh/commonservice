@@ -1,0 +1,448 @@
+2022-04-02 17:31:50 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:31:50 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74691 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:31:50 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:31:51 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 685 ms
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:31:52 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.55 seconds (JVM running for 2.102)
+2022-04-02 17:32:13 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:32:13 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:32:13 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 17:32:13 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:21  org.apache.catalina.util.ParameterMap@68cd2380
+2022-04-02 17:32:13 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 17:32:13 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 17:33:04 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 17:33:04 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 17:33:06 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74741 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:33:06 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:33:06 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 552 ms
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:33:07 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.286 seconds (JVM running for 1.545)
+2022-04-02 17:33:11 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:33:11 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:33:11 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 17:33:11 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:22  {
+  "username" : [ "username" ],
+  "password" : [ "passwordInDb" ]
+}
+2022-04-02 17:33:11 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 17:33:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 17:34:29 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 17:34:29 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 17:34:31 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74764 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:34:31 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:34:31 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 563 ms
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:34:32 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.331 seconds (JVM running for 1.797)
+2022-04-02 17:34:35 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:34:35 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:34:35 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 2 ms
+2022-04-02 17:34:35 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:22  0:0:0:0:0:0:0:1
+2022-04-02 17:34:35 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 17:34:35 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 17:38:04 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 17:38:04 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 17:38:07 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74825 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:38:07 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 563 ms
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:38:08 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.289 seconds (JVM running for 1.832)
+2022-04-02 17:38:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:38:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:38:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 2 ms
+2022-04-02 17:38:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:25  
+2022-04-02 17:38:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:26  {
+  "username" : [ "username" ],
+  "password" : [ "passwordInDb" ]
+}
+2022-04-02 17:38:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 17:38:12 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 17:39:50 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 17:39:50 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 17:39:52 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74858 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:39:52 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 561 ms
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:39:53 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.303 seconds (JVM running for 1.568)
+2022-04-02 17:40:14 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:40:14 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:40:14 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 17:40:14 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:25   /login/byAccount /login/byAccount null
+2022-04-02 17:40:14 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:26  {
+  "username" : [ "username" ],
+  "password" : [ "passwordInDb" ]
+}
+2022-04-02 17:40:15 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 17:40:15 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 17:42:54 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 17:42:55 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 17:42:57 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74906 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:42:57 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 571 ms
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:42:58 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.45 seconds (JVM running for 1.947)
+2022-04-02 17:43:00 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:43:00 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:43:00 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 17:43:00 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  /login/byAccount :{
+  "username" : [ "username" ],
+  "password" : [ "passwordInDb" ]
+}
+2022-04-02 17:43:00 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 17:43:01 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 17:44:26 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 17:44:26 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 17:44:28 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:44:28 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74928 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:44:28 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 557 ms
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:44:29 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.364 seconds (JVM running for 1.622)
+2022-04-02 17:44:30 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:44:30 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:44:30 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 17:44:30 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/login/byAccount Param:{
+  "username" : [ "username" ],
+  "password" : [ "passwordInDb" ]
+}
+2022-04-02 17:44:31 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 17:44:31 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 17:45:01 WARN  -[traceid: ] -[http-nio-8080-exec-3] com.tools.commonservice.exception.GlobalExceptionResolver.resolveException:53  用户未登录
+2022-04-02 17:45:12 INFO  -[traceid: ] -[http-nio-8080-exec-4] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 17:47:09 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 17:47:09 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 17:47:11 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74972 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:47:11 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:47:11 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 593 ms
+2022-04-02 17:47:12 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:47:13 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:47:13 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:47:13 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:47:13 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:47:13 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:47:13 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:47:13 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.314 seconds (JVM running for 1.764)
+2022-04-02 17:47:16 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:47:16 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:47:16 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 2 ms
+2022-04-02 17:47:16 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 17:47:16 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.controller.SnowflakeController.getOne:40  null
+2022-04-02 17:47:38 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 74981 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:47:38 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:47:38 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:47:38 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:47:38 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:47:38 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 564 ms
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:47:39 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.374 seconds (JVM running for 1.712)
+2022-04-02 17:47:41 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:47:41 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:47:41 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 17:47:41 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.AccessFilter.doFilter:61  username
+2022-04-02 17:47:41 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 17:47:41 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.controller.SnowflakeController.getOne:40  null
+2022-04-02 17:55:50 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 75109 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:55:50 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:55:50 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 556 ms
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:55:51 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:55:52 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:55:52 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.301 seconds (JVM running for 1.752)
+2022-04-02 17:55:58 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:55:58 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:55:58 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 2 ms
+2022-04-02 17:55:58 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 17:55:58 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.controller.SnowflakeController.getOne:40  username
+2022-04-02 17:56:58 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 17:56:58 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 75131 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 17:56:58 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 17:56:59 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 636 ms
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 17:57:00 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.519 seconds (JVM running for 1.927)
+2022-04-02 17:57:02 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 17:57:02 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 17:57:02 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 17:57:46 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 17:57:46 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.controller.SnowflakeController.getOne:40  username
+2022-04-02 18:01:35 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 18:01:35 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 75201 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 18:01:35 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 709 ms
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 18:01:36 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 18:01:37 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 18:01:37 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.611 seconds (JVM running for 2.003)
+2022-04-02 18:01:38 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 18:01:38 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 18:01:38 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 2 ms
+2022-04-02 18:01:59 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 18:01:59 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.controller.SnowflakeController.getOne:40  null
+2022-04-02 18:06:45 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 18:06:45 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 75314 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 18:06:45 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 665 ms
+2022-04-02 18:06:46 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 18:06:47 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:06:47 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 18:06:47 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 18:06:47 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 18:06:47 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 18:06:47 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 18:06:47 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.529 seconds (JVM running for 1.883)
+2022-04-02 18:06:53 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 18:06:53 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 18:06:53 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 18:06:57 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 18:06:57 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.controller.SnowflakeController.getOne:40  username
+2022-04-02 18:07:53 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 18:07:53 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 75341 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 18:07:53 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 18:07:53 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 18:07:53 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 18:07:53 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 655 ms
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 18:07:54 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.553 seconds (JVM running for 1.935)
+2022-04-02 18:07:56 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 18:07:56 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 18:07:56 INFO  -[traceid: ] -[http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 18:08:48 INFO  -[traceid: ] -[http-nio-8080-exec-1] com.tools.commonservice.filter.ParamLogFilter.doFilter:24  RequestUri:/snowflake/getOne Param:{ }
+2022-04-02 18:12:07 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 75407 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 18:12:07 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 637 ms
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 18:12:08 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.435 seconds (JVM running for 1.962)
+2022-04-02 18:12:10 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-02 18:12:10 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:525  Initializing Servlet 'dispatcherServlet'
+2022-04-02 18:12:10 INFO  -[traceid: ] -[http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet.initServletBean:547  Completed initialization in 1 ms
+2022-04-02 18:12:10 INFO  -[traceid: ] -[http-nio-8080-exec-2] com.tools.commonservice.filter.ParamLogFilter.doFilter:25  RequestUri:/snowflake/getOne Param:{
+  "userId" : [ "username" ]
+}
+2022-04-02 18:15:07 INFO  -[traceid: ] -[http-nio-8080-exec-5] com.tools.commonservice.filter.ParamLogFilter.doFilter:25  RequestUri:/login/byAccount Param:{
+  "username" : [ "username" ],
+  "password" : [ "passwordInDb" ]
+}
+2022-04-02 18:15:07 INFO  -[traceid: ] -[http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource.getConnection:110  HikariPool-1 - Starting...
+2022-04-02 18:15:07 INFO  -[traceid: ] -[http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource.getConnection:123  HikariPool-1 - Start completed.
+2022-04-02 18:15:26 WARN  -[traceid: ] -[http-nio-8080-exec-6] com.tools.commonservice.exception.GlobalExceptionResolver.resolveException:53  用户未登录
+2022-04-02 18:15:30 INFO  -[traceid: ] -[http-nio-8080-exec-7] com.tools.commonservice.filter.ParamLogFilter.doFilter:25  RequestUri:/snowflake/getOne Param:{
+  "userId" : [ "username" ]
+}
+2022-04-02 18:15:44 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-02 18:15:44 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
+2022-04-02 21:25:45 INFO  -[traceid: ] -[background-preinit] org.hibernate.validator.internal.util.Version.<clinit>:21  HV000001: Hibernate Validator 6.2.0.Final
+2022-04-02 21:25:45 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarting:55  Starting CommonServiceApplication using Java 1.8.0_302 on gaoooyh-3.local with PID 78113 (/Users/gaoyinghan/workspace/myPorject/common-service/build/classes/java/main started by gaoyinghan in /Users/gaoyinghan/workspace/myPorject/common-service)
+2022-04-02 21:25:45 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStartupProfileInfo:635  No active profile set, falling back to default profiles: default
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:262  Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:132  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:201  Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:108  Tomcat initialized with port(s): 8080 (http)
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardService.log:173  Starting service [Tomcat]
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.apache.catalina.core.StandardEngine.log:173  Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173  Initializing Spring embedded WebApplicationContext
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:290  Root WebApplicationContext: initialization completed in 675 ms
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.apache.coyote.http11.Http11NioProtocol.log:173  Starting ProtocolHandler ["http-nio-8080"]
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:220  Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:160  Context refreshed
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start:163  Found 1 custom documentation plugin(s)
+2022-04-02 21:25:46 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan:41  Scanning for api listing references
+2022-04-02 21:25:47 INFO  -[traceid: ] -[main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith:40  Generating unique operation named: getOneUsingGET_1
+2022-04-02 21:25:47 INFO  -[traceid: ] -[main] com.tools.commonservice.CommonServiceApplication.logStarted:61  Started CommonServiceApplication in 1.459 seconds (JVM running for 1.93)

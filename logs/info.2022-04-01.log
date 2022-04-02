@@ -1,0 +1,3 @@
+2022-04-01 08:02:12 WARN  -[traceid: ] -[HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool.run:780  HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s841ms), soft-evicting connections from pool.
+2022-04-01 10:48:38 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:350  HikariPool-1 - Shutdown initiated...
+2022-04-01 10:48:38 INFO  -[traceid: ] -[SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource.close:352  HikariPool-1 - Shutdown completed.
