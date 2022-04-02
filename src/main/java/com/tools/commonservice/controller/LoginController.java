@@ -23,6 +23,13 @@ public class LoginController {
     @Resource
     UserService userService;
 
+    /**
+     * username: username
+     * password: passwordInDb
+     * @param param
+     * @param response
+     * @return
+     */
     @PostMapping("/byAccount")
     @ApiOperation("通过账号登陆")
     public HttpResult<String> loginByAccount(AccountParam param, HttpServletResponse response) {
