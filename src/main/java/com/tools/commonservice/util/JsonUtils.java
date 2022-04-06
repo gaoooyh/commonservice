@@ -2,9 +2,10 @@ package com.tools.commonservice.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
-
 import java.text.SimpleDateFormat;
 
 public class JsonUtils {
@@ -12,13 +13,20 @@ public class JsonUtils {
 
     static {
         Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder()
-                .indentOutput(true)
-                .serializationInclusion(JsonInclude.Include.USE_DEFAULTS)
-                .propertyNamingStrategy(PropertyNamingStrategy.LOWER_CAMEL_CASE)
-                .dateFormat(new SimpleDateFormat("yyyy-MM-dd"));
+                .indentOutput(true) //美化json输出, 换行
+                .serializationInclusion(JsonInclude.Include.USE_DEFAULTS)  //序列化策略
+                .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE )  //下划线转驼峰
+                .dateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));  //将时间戳转时间
 
         objectMapper = builder.build();
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
+        SimpleModule simpleModule = new SimpleModule();
+        //long to String format
+        simpleModule.addSerializer(Long.class, ToStringSerializer.instance);
+        simpleModule.addSerializer(Long.TYPE, ToStringSerializer.instance);
+        objectMapper.registerModule(simpleModule);
+
     }
 
     public static String write(Object obj) {

@@ -3,6 +3,7 @@ package com.tools.commonservice.config;
 import com.tools.commonservice.filter.AccessFilter;
 import com.tools.commonservice.filter.ExceptionProcessFilter;
 import com.tools.commonservice.filter.ParamLogFilter;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +19,7 @@ import javax.servlet.Filter;
  * paramLogFilter 打印请求uri和参数
  */
 @Configuration
+@AutoConfigureAfter({RedisService.class, AccessConfig.class})
 public class FilterConfig {
     @Resource
     private AccessConfig accessConfig;
