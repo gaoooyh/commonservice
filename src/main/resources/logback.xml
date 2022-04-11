@@ -5,7 +5,7 @@
     <property name="log.path" value="logs" />
     <property name="encoding" value="UTF-8"/>
     <property name="normal-pattern"
-              value="%d{yyyy-MM-dd HH:mm:ss} %-5level -[traceid: %X{traceId}] -[%thread] %logger.%M:%L  %msg%n"/>
+              value="%d{yyyy-MM-dd HH:mm:ss} %-5level -[%thread] %logger.%M:%L  %msg%n"/>
 
     <!--输出到控制台-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">

@@ -33,6 +33,11 @@ com:
     openList:
       - /login/**
       - /v2/api-docs
+#     swagger ui,线上只保留/v2/api-docs
+      - /swagger-ui.html
+      - /webjars/springfox-swagger-ui/**
+      - /swagger-resources/**
+      - /v2/api-docs
     whiteList:
       - /captcha/**
       - /snowflake/**
