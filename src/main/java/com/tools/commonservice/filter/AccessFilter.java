@@ -63,7 +63,7 @@ public class AccessFilter extends GenericFilterBean {
                         throw new ApiException(Constants.ERROR_NOT_LOGIN);
                     }
                     Map<String, Object> map = new HashMap<>();
-                    map.put("userId", JWTUtil.getUserId(token));
+                    map.put("userId", userId);
                     ParameterRequestWrapper wrapper = new ParameterRequestWrapper(request, map);
 
                     chain.doFilter(wrapper, response);
