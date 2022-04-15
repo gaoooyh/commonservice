@@ -2,13 +2,12 @@ package com.tools.commonservice.controller;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tools.commonservice.common.HttpResult;
+import com.tools.commonservice.handler.ReqParam;
 import com.tools.commonservice.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
@@ -32,7 +31,7 @@ public class LoginController {
      */
     @PostMapping("/byAccount")
     @ApiOperation("通过账号登陆")
-    public HttpResult<String> loginByAccount(AccountParam param, HttpServletResponse response) {
+    public HttpResult<String> loginByAccount(@ReqParam AccountParam param, HttpServletResponse response) {
         String token = userService.loginByAccount(param.getUsername(), param.getPassword());
         if(token != null) {
             response.addHeader("MyToken", token);
@@ -46,9 +45,7 @@ public class LoginController {
 
     @Data
     static class AccountParam {
-        @JsonProperty("username")
         private String username;
-        @JsonProperty("password")
         private String password;
     }
 }

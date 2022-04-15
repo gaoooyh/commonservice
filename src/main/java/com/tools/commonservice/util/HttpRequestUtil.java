@@ -49,12 +49,17 @@ public class HttpRequestUtil {
 
         try {
             URL url = new URL(urlParam);
+            System.out.println(urlParam);
             //得到连接对象
             con = (HttpURLConnection) url.openConnection();
             //设置请求类型
             con.setRequestMethod(httpMethod.name());
             //设置请求需要返回的数据类型和字符集类型
-            con.setRequestProperty("Content-Type", "application/json;charset=GBK");
+            if(httpMethod == HttpMethod.POST) {
+                con.setRequestProperty("Content-Type", "application/json;charset=GBK");
+            }
+
+
             //允许写出
             con.setDoOutput(true);
             //允许读入
@@ -95,22 +100,27 @@ public class HttpRequestUtil {
         StringBuilder stringBuilder = new StringBuilder("?");
         Set<String> keySet = map.keySet();
         try {
-            for (String s : keySet) {
-                Object obj = map.get(s);
+            for (String key : keySet) {
+                Object obj = map.get(key);
                 if(obj instanceof Collection) {
                     Collection collection = (Collection)obj;
                     Iterator iterator = collection.iterator();
                     while (iterator.hasNext()) {
-                        stringBuilder.append(s).append("=").append(URLEncoder.encode(iterator.next().toString(), "utf-8")).append("&");
+                        stringBuilder.append(key).append("=")
+                                .append(URLEncoder.encode(iterator.next().toString(), "utf-8"))
+                                .append("&");
                     }
                 }
                 // 基础类型
-                else if(obj.getClass().isPrimitive()) {
-                    stringBuilder.append(s).append("=").append(URLEncoder.encode(map.get(s).toString(), "utf-8")).append("&");
+                else if(isPrimitive(obj) || obj.getClass() == String.class) {
+                    stringBuilder.append(key).append("=")
+                            .append(URLEncoder.encode(map.get(key).toString(), "utf-8"))
+                            .append("&");
                 }
-                
                 else {
-                    stringBuilder.append(s).append("=").append(URLEncoder.encode(JsonUtils.write(map.get(s)), "utf-8")).append("&");
+                    stringBuilder.append(key).append("=")
+                            .append(URLEncoder.encode(JsonUtils.write(map.get(key)), "utf-8"))
+                            .append("&");
                 }
             }
         } catch (Exception ex) {
@@ -119,5 +129,15 @@ public class HttpRequestUtil {
         }
         return stringBuilder.substring(0, stringBuilder.lastIndexOf("&"));
     }
+
+
+    private static boolean isPrimitive(Object obj) {
+        try {
+            return ((Class<?>) obj.getClass().getField("TYPE").get(null)).isPrimitive();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }
 
