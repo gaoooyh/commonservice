@@ -13,7 +13,7 @@ public class JsonUtils {
 
     static {
         Jackson2ObjectMapperBuilder builder = new Jackson2ObjectMapperBuilder()
-                .indentOutput(true) //美化json输出, 换行
+                .indentOutput(false) //美化json输出, 换行
                 .serializationInclusion(JsonInclude.Include.USE_DEFAULTS)  //序列化策略
                 .propertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE )  //下划线转驼峰
                 .dateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));  //将时间戳转时间
