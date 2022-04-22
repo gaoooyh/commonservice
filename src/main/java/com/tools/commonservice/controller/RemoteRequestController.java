@@ -7,7 +7,6 @@ import com.tools.commonservice.util.JsonUtils;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 @Slf4j
@@ -53,7 +52,7 @@ public class RemoteRequestController {
         param.setPassword("post+Password");
         param.setUsername(Arrays.asList(new String[]{"gaoooyh", "Inghayo"}));
 
-        HttpResult result = HttpRequestUtil.doPost("http://localhost:8080/remote/RemotePost", JsonUtils.write(param), HttpResult.class);
+        HttpResult result = HttpRequestUtil.doPost("http://localhost:8080/remote/remotePost", JsonUtils.write(param), HttpResult.class);
 
         System.out.println("testPost response : " + result);
 

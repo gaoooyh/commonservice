@@ -34,6 +34,7 @@ com:
       - /login/**
       - /v2/api-docs
       - /remote/**
+      - /limit/**
 #     swagger ui,线上只保留/v2/api-docs
       - /swagger-ui.html
       - /webjars/springfox-swagger-ui/**

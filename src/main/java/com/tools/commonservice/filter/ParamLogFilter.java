@@ -1,5 +1,10 @@
 package com.tools.commonservice.filter;
 
+import com.alibaba.csp.sentinel.Entry;
+import com.alibaba.csp.sentinel.SphU;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.tools.commonservice.exception.ApiException;
+import com.tools.commonservice.exception.ErrorCode;
 import com.tools.commonservice.util.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +26,14 @@ public class ParamLogFilter extends GenericFilterBean {
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) req;
-        log.info("RequestUri: {}, Param: {}", request.getRequestURI(), JsonUtils.write(request.getParameterMap()));
-        chain.doFilter(req, res);
+
+        //add flow limit
+        try (Entry ignored = SphU.entry("FlowLimit")) {
+            log.info("RequestUri: {}, Param: {}", request.getRequestURI(), JsonUtils.write(request.getParameterMap()));
+            chain.doFilter(req, res);
+        } catch (BlockException ex) {
+            log.error("Service Busy, RequestUri: {}, Param: {}", request.getRequestURI(), JsonUtils.write(request.getParameterMap()));
+            throw new ApiException(ErrorCode.paramError("服务器繁忙, 请稍后重试"));
+        }
     }
 }
