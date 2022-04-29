@@ -5,6 +5,8 @@ import com.tools.commonservice.util.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.ConversionNotSupportedException;
 import org.springframework.beans.TypeMismatchException;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.validation.BindException;
@@ -13,8 +15,11 @@ import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MissingPathVariableException;
 import org.springframework.web.bind.ServletRequestBindingException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.async.AsyncRequestTimeoutException;
 import org.springframework.web.multipart.support.MissingServletRequestPartException;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,9 +27,30 @@ import java.io.IOException;
 
 
 @Slf4j
-public class GlobalExceptionResolver {
+@Configuration
+public class GlobalExceptionResolver implements HandlerExceptionResolver, Ordered {
+    public GlobalExceptionResolver() {
+    }
 
-    public static void resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Exception ex) {
+    @ExceptionHandler({NoHandlerFoundException.class})
+    public ModelAndView createModelAndView(HttpResult httpResult, HttpServletResponse response) {
+        response.setCharacterEncoding("utf-8");
+        response.setHeader("Content-type", "application/json;charset=UTF-8");
+
+        try {
+            response.getWriter().write(JsonUtils.write(HttpResult.failure()));
+        } catch (IOException ex) {
+            log.error(ex.getMessage(), ex);
+        }
+
+        return new ModelAndView();
+    }
+
+    public int getOrder() {
+        return -2147483648;
+    }
+
+    public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception ex) {
         HttpResult<Void> result = HttpResult.failure();
         ErrorCode errorCode = null;
         if (ex instanceof ApiException) {
@@ -62,11 +88,11 @@ public class GlobalExceptionResolver {
 
         try {
             httpServletResponse.getWriter().write(JsonUtils.write(result));
-        } catch (IOException var8) {
-            log.error(var8.getMessage(), var8);
+        } catch (IOException ioException) {
+            log.error(ioException.getMessage(), ioException);
         }
 
-
+        return new ModelAndView();
     }
 
 }

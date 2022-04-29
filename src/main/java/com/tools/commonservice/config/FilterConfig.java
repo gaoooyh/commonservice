@@ -1,7 +1,6 @@
 package com.tools.commonservice.config;
 
 import com.tools.commonservice.filter.AccessFilter;
-import com.tools.commonservice.filter.ExceptionProcessFilter;
 import com.tools.commonservice.filter.ParamLogFilter;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -32,9 +31,6 @@ public class FilterConfig {
         return new AccessFilter(accessConfig, redisService);
     }
 
-    public Filter exceptionFilter() {
-        return new ExceptionProcessFilter();
-    }
 
     public Filter paramLogFilter() {
         return new ParamLogFilter();
@@ -53,14 +49,6 @@ public class FilterConfig {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
         filterRegistrationBean.setFilter(accessFilter());
         filterRegistrationBean.setOrder(-2);
-        return filterRegistrationBean;
-    }
-
-    @Bean(name = "registerExceptionFilter")
-    public FilterRegistrationBean registerExceptionFilter(){
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-        filterRegistrationBean.setFilter(exceptionFilter());
-        filterRegistrationBean.setOrder(-3);
         return filterRegistrationBean;
     }
 
