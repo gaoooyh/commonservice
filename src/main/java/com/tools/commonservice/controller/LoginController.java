@@ -1,7 +1,9 @@
 package com.tools.commonservice.controller;
 
+import com.tools.commonservice.common.HttpPage;
 import com.tools.commonservice.common.HttpResult;
 import com.tools.commonservice.annotation.ReqParam;
+import com.tools.commonservice.data.entity.UserEntity;
 import com.tools.commonservice.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -40,6 +42,12 @@ public class LoginController {
         }
     }
 
+
+    @RequestMapping("/getAll")
+    @ApiOperation("获取账号")
+    public HttpResult<HttpPage<UserEntity>> loginByAccount() {
+        return HttpResult.success().setData(userService.getPageData(10,1));
+    }
 
 
     @Data

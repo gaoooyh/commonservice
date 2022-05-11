@@ -1,6 +1,7 @@
 package com.tools.commonservice.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tools.commonservice.data.entity.UserEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -16,4 +17,6 @@ public interface UserMapper extends BaseMapper<UserEntity> {
     UserEntity getByName(String username);
 
     UserEntity getById2(String username);
+
+    Page<UserEntity> getUsers(Integer id, Page page);
 }
