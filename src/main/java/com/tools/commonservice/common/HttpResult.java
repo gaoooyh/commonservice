@@ -1,5 +1,6 @@
 package com.tools.commonservice.common;
 
+import com.tools.commonservice.exception.ErrorCode;
 import lombok.Data;
 
 /**
@@ -28,6 +29,10 @@ public class HttpResult<T> {
     public HttpResult<T> setCode(Integer code) {
         this.code = code;
         return this;
+    }
+
+    public static HttpResult setCode(ErrorCode errorCode) {
+        return (new HttpResult()).setCode(errorCode.code()).setMessage(errorCode.message());
     }
 
 

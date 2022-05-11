@@ -2,6 +2,7 @@ package com.tools.commonservice.controller;
 
 
 import com.tools.commonservice.common.HttpResult;
+import com.tools.commonservice.exception.Constants;
 import com.tools.commonservice.util.JsonUtils;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ import java.util.Map;
 public class CustomErrorController implements ErrorController {
 
     @GetMapping("/error")
-    public HttpResult<Map> error(HttpServletRequest request) {
+    public HttpResult error(HttpServletRequest request) {
         System.out.println("CustomErrorController");
 
 
@@ -33,7 +34,7 @@ public class CustomErrorController implements ErrorController {
 
         System.out.println(map);
 
-        return HttpResult.failure().setMessage("请求路径有误");
+        return HttpResult.setCode(Constants.ERROR_SC_NOT_FOUND);
     }
 
 }
