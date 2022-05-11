@@ -1,4 +1,4 @@
-package com.tools.commonservice.handler;
+package com.tools.commonservice.annotation;
 
 import java.lang.annotation.*;
 

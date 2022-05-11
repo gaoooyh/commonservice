@@ -2,7 +2,7 @@ package com.tools.commonservice.controller;
 
 import com.tools.commonservice.common.HttpResult;
 import com.tools.commonservice.data.enums.GeeEnum;
-import com.tools.commonservice.handler.ReqParam;
+import com.tools.commonservice.annotation.ReqParam;
 import com.tools.commonservice.util.JsonUtils;
 import io.swagger.annotations.*;
 import lombok.Data;
@@ -49,6 +49,7 @@ public class EnumController {
 
         EnumData data = JsonUtils.read(str, EnumData.class);
         System.out.println(data);
+
 
         return HttpResult.success().setData(data);
     }

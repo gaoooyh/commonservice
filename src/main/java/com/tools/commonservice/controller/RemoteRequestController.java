@@ -1,7 +1,7 @@
 package com.tools.commonservice.controller;
 
 import com.tools.commonservice.common.HttpResult;
-import com.tools.commonservice.handler.ReqParam;
+import com.tools.commonservice.annotation.ReqParam;
 import com.tools.commonservice.util.HttpRequestUtil;
 import com.tools.commonservice.util.JsonUtils;
 import lombok.Data;

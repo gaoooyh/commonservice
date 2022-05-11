@@ -1,7 +1,7 @@
 package com.tools.commonservice.config;
 
 
-import com.tools.commonservice.handler.ReqParamMethodArgumentResolver;
+import com.tools.commonservice.annotation.ReqParamMethodArgumentResolver;
 import com.tools.commonservice.util.JsonUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

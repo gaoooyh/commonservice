@@ -1,8 +1,7 @@
 package com.tools.commonservice.controller;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tools.commonservice.common.HttpResult;
-import com.tools.commonservice.handler.ReqParam;
+import com.tools.commonservice.annotation.ReqParam;
 import com.tools.commonservice.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

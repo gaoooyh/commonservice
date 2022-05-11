@@ -6,6 +6,7 @@ import com.tools.commonservice.exception.ApiException;
 import com.tools.commonservice.exception.Constants;
 import com.tools.commonservice.exception.ErrorCode;
 import com.tools.commonservice.util.JWTUtil;
+import com.tools.commonservice.util.UserContextUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.AntPathMatcher;
@@ -48,29 +49,32 @@ public class AccessFilter extends GenericFilterBean {
             chain.doFilter(request, response);
             return;
         }
-        if (accessConfig.getWhiteList() != null) {
-            for (String whiteUrlPattern : accessConfig.getWhiteList()) {
-                if (this.pathMatcher.match(whiteUrlPattern, request.getServletPath())) {
-                    String token = request.getHeader("MyToken");
-                    if(token == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
-                    String userId = JWTUtil.getUserId(token);
-                    if(userId == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
-
-                    String tokenInRedis = redisService.get(userId);
-                    if(tokenInRedis != null && token.equals(tokenInRedis)) {
-                        redisService.set(userId, token,30*60);
-                    } else {
-                        throw new ApiException(Constants.ERROR_NOT_LOGIN);
-                    }
-                    Map<String, Object> map = new HashMap<>();
-                    map.put("userId", userId);
-                    ParameterRequestWrapper wrapper = new ParameterRequestWrapper(request, map);
-
-                    chain.doFilter(wrapper, response);
-                    return;
-                }
-            }
-        }
+//        if (accessConfig.getWhiteList() != null) {
+//            for (String whiteUrlPattern : accessConfig.getWhiteList()) {
+//                if (this.pathMatcher.match(whiteUrlPattern, request.getServletPath())) {
+//                    String token = request.getHeader("MyToken");
+//                    if(token == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+//                    String userId = JWTUtil.getUserId(token);
+//                    if(userId == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+//
+//                    String tokenInRedis = redisService.get(userId);
+//                    if(tokenInRedis != null && token.equals(tokenInRedis)) {
+//                        redisService.set(userId, token,30*60);
+//                    } else {
+//                        throw new ApiException(Constants.ERROR_NOT_LOGIN);
+//                    }
+//
+//                    UserContextUtil.setCurrentUser(userId);
+//
+//                    Map<String, Object> map = new HashMap<>();
+//                    map.put("userId", userId);
+//                    ParameterRequestWrapper wrapper = new ParameterRequestWrapper(request, map);
+//
+//                    chain.doFilter(wrapper, response);
+//                    return;
+//                }
+//            }
+//        }
 
         if (accessConfig.getOpenList() != null) {
             for (String openUrlPattern : accessConfig.getOpenList()) {
@@ -81,7 +85,29 @@ public class AccessFilter extends GenericFilterBean {
             }
         }
 
-        throw new ApiException(ErrorCode.paramError("无效的访问请求"));
+        String token = request.getHeader("MyToken");
+        if(token == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+        String userId = JWTUtil.getUserId(token);
+        if(userId == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+
+        String tokenInRedis = redisService.get(userId);
+        if(tokenInRedis != null && token.equals(tokenInRedis)) {
+            redisService.set(userId, token,30*60);
+        } else {
+            throw new ApiException(Constants.ERROR_NOT_LOGIN);
+        }
+
+        UserContextUtil.setCurrentUser(userId);
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("userId", userId);
+        ParameterRequestWrapper wrapper = new ParameterRequestWrapper(request, map);
+
+        chain.doFilter(wrapper, response);
+
+//        throw new ApiException(ErrorCode.paramError("无效的访问请求"));
+
+
     }
 
 
