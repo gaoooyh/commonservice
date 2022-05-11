@@ -40,6 +40,7 @@ com:
       - /webjars/springfox-swagger-ui/**
       - /swagger-resources/**
       - /v2/api-docs
+      - /enum/**
     whiteList:
       - /captcha/**
       - /snowflake/**
