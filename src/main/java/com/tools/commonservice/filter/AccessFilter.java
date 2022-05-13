@@ -79,22 +79,33 @@ public class AccessFilter extends GenericFilterBean {
         if (accessConfig.getOpenList() != null) {
             for (String openUrlPattern : accessConfig.getOpenList()) {
                 if (this.pathMatcher.match(openUrlPattern, request.getServletPath())) {
+                    //ErrorController返回信息
+                    //当请求的路径不存在时, eg: login/notExistUrl 提示 404:未找到访问的接口
                     chain.doFilter(request, response);
                     return;
                 }
             }
         }
 
+        /*
+        ErrorController返回信息
+        当未登陆用户故意请求一个不存在的路径时, 提示 401:用户未登陆
+        登陆用户请求不存在的路径时, 提示 404:未找到访问的接口
+         */
         String token = request.getHeader("MyToken");
-        if(token == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+        if(token == null) {
+            UserContextUtil.setCurrentError(new ApiException(Constants.ERROR_NOT_LOGIN));
+        }
         String userId = JWTUtil.getUserId(token);
-        if(userId == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+        if(userId == null) {
+            UserContextUtil.setCurrentError(new ApiException(Constants.ERROR_NOT_LOGIN));
+        }
 
         String tokenInRedis = redisService.get(userId);
         if(tokenInRedis != null && token.equals(tokenInRedis)) {
             redisService.set(userId, token,30*60);
         } else {
-            throw new ApiException(Constants.ERROR_NOT_LOGIN);
+            UserContextUtil.setCurrentError(new ApiException(Constants.ERROR_NOT_LOGIN));
         }
 
         UserContextUtil.setCurrentUser(userId);

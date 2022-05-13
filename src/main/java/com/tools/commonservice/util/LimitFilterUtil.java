@@ -12,6 +12,10 @@ import java.util.*;
 public class LimitFilterUtil {
     static Logger log = LoggerFactory.getLogger(LimitFilterUtil.class);
 
+    /*
+     * 目前是固定的key && count, 可以升级为从zk订阅获取流量限制规则, 避免频繁调整配置上线
+     * 可以更进一步细分流量入口, eg: 双十一期间 增大下单流量限制, 降低退货流量限制
+     */
     static {
 //        LimitFilter.degradeRule("degradeRule", 100);
         //每秒100qps限制
@@ -19,8 +23,10 @@ public class LimitFilterUtil {
     }
 
 
-
-    //添加流量限制规则
+    /**
+     * 添加流量限制规则
+     * 在{@link com.tools.commonservice.filter.ParamLogFilter} 中添加了流量限制
+     */
     public static void flowRule(String name, int count) {
         //获取已经设置的限流规则
         List<FlowRule> ruleList = FlowRuleManager.getRules();
@@ -48,8 +54,8 @@ public class LimitFilterUtil {
 
     /**
      * 按分钟内异常数量进行降级
-     * @param name
-     * @param count
+     * @param name 对于远程服务a,b,c 分别统计
+     * @param count 发生count次异常后不再请求
      */
     public static void degradeRule(String name, int count) {
         //获取已经设置的降级规则

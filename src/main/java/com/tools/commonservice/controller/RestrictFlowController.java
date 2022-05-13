@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 流量控制, 控制单位时间通过请求次数, eg: 控制每秒100个请求
+ * 熔断控制, 当请求其他服务(远程单位)时, 避免其他服务出现问题影响到当前服务
+ * 此处为演示demo
+ * {@link com.tools.commonservice.util.LimitFilterUtil} 具体配置信息
+ */
 @RestController
 @RequestMapping("limit")
 public class RestrictFlowController {

@@ -9,7 +9,9 @@ import java.util.List;
 /**
  * 是否需要验证登陆, 详见AccessFilter
  * openList 不需要token即可直接请求
- * whiteList 需要有效token 才能访问
+ * 其他接口均需要token才能通过
+ *
+ * whiteList和blackList暂未使用
  */
 @Data
 @ConfigurationProperties(prefix = "com.access")

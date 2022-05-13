@@ -37,8 +37,6 @@ dependencies {
 
 
 
-    // https://mvnrepository.com/artifact/org.openjdk.jol/jol-core  查看类对象参数在jvm中内存分配情况
-    compileOnly 'org.openjdk.jol:jol-core:0.9'
     compileOnly 'org.projectlombok:lombok'
 
     annotationProcessor 'org.projectlombok:lombok'

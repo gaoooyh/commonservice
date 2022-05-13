@@ -16,6 +16,9 @@ import java.util.List;
 @Configuration
 public class WebDataConvertConfig implements WebMvcConfigurer {
 
+    /**
+     * 添加自定义的objectMapper
+     */
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         MappingJackson2HttpMessageConverter jackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
@@ -23,6 +26,9 @@ public class WebDataConvertConfig implements WebMvcConfigurer {
         converters.add(jackson2HttpMessageConverter);
     }
 
+    /**
+     * 添加自定义的参数解析
+     */
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
         argumentResolvers.add(new ReqParamMethodArgumentResolver(this.validatorFactoryBean()));
     }

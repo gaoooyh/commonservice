@@ -13,8 +13,13 @@ import javax.servlet.Filter;
 /**
  * 配置过滤器
  * 在请求进到controller之前和结束controller之后 对数据进行校验
- * accessFilter 检查token
- * exceptionFilter 捕获出现的异常
+ * accessFilter 检查token并过滤请求
+ *
+ *
+ * 已删除的 exceptionFilter 捕获出现的异常
+ * springboot自带的异常处理会先于exceptionFilter对异常进行处理, 并对异常进行封装
+ * 因此异常处理不采用filter方式, 改按spring提供的方式进行处理
+ *
  * paramLogFilter 打印请求uri和参数
  */
 @Configuration

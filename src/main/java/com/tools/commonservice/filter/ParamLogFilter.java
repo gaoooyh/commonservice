@@ -27,7 +27,7 @@ public class ParamLogFilter extends GenericFilterBean {
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) req;
 
-        //add flow limit
+        //这里增加流量控制并不规范
         try (Entry ignored = SphU.entry("FlowLimit")) {
             log.info("RequestUri: {}, Param: {}", request.getRequestURI(), JsonUtils.write(request.getParameterMap()));
             chain.doFilter(req, res);
