@@ -16,4 +16,9 @@ public class UserEntity  extends BaseEntity{
     private String username;
     @JsonIgnore
     private String password;
+
+    //三个排序字段
+    private Integer orderColumn1;
+    private Long orderColumn2;
+    private Integer orderColumn3;
 }

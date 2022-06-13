@@ -7,4 +7,6 @@ public interface UserService {
     String loginByAccount(String username, String password);
 
     HttpPage<UserEntity> getPageData(int pageSize, int page);
+
+    HttpPage<UserEntity> getCustomPageData(int pageSize, int currentPage);
 }

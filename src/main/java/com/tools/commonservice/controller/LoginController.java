@@ -43,12 +43,18 @@ public class LoginController {
     }
 
 
-    @RequestMapping("/getAll")
+    @GetMapping("/getAll")
     @ApiOperation("获取账号")
     public HttpResult<HttpPage<UserEntity>> loginByAccount() {
         return HttpResult.success().setData(userService.getPageData(10,1));
     }
 
+
+    @GetMapping("/getAllUserByPage")
+    @ApiOperation("分页获取账号")
+    public HttpResult<HttpPage<UserEntity>> getAllUserByPage() {
+        return HttpResult.success().setData(userService.getCustomPageData(10,1));
+    }
 
     @Data
     static class AccountParam {
