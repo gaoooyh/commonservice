@@ -44,5 +44,5 @@ com:
 #      - /snowflake/**
 #      - /remote/**
 #      - /limit/**
-#      - /export/**
+      - /export/**
 #      - /enum/**

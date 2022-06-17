@@ -34,6 +34,8 @@ dependencies {
     implementation 'io.springfox:springfox-swagger2:2.9.2'
     implementation 'com.alibaba.csp:sentinel-core:1.8.3'
 
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml excel
+    implementation 'org.apache.poi:poi-ooxml:5.2.2'
 
 
 
