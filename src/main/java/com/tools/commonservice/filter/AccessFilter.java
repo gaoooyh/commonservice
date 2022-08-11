@@ -116,6 +116,7 @@ public class AccessFilter extends GenericFilterBean {
 
         chain.doFilter(wrapper, response);
 
+        UserContextUtil.cleanThreadLocal();
 //        throw new ApiException(ErrorCode.paramError("无效的访问请求"));
 
 

@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @TableName("t_user")
 @EqualsAndHashCode(callSuper = false)
 public class UserEntity  extends BaseEntity{
-    @TableId(type = IdType.ASSIGN_ID)
+    @TableId(type = IdType.AUTO)
     private Integer id;
     private String username;
     @JsonIgnore

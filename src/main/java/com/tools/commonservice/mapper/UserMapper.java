@@ -15,7 +15,7 @@ public interface UserMapper extends BaseMapper<UserEntity> {
     @Insert("insert into t_user(id, username, password) VALUES  (#{id}, #{username}, #{password})")
     void create(String name, int age, String mail);
 
-    @Select("select id, username from t_user where username = #{username}")
+    @Select("select id, username, password from t_user where username = #{username}")
     UserEntity getByName(String username);
 
     UserEntity getById2(String username);

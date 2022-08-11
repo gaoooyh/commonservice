@@ -21,6 +21,11 @@ public class UserContextUtil {
         throw new ApiException(Constants.ERROR_NOT_LOGIN);
     }
 
+    public static void cleanThreadLocal() {
+         userThreadLocal.remove();
+         errorThreadLocal.remove();
+    }
+
     public static ApiException getCurrentError() {
         return errorThreadLocal.get();
     }

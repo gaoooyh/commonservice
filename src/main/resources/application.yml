@@ -37,7 +37,7 @@ com:
       - /swagger-ui.html
       - /webjars/springfox-swagger-ui/**
       - /swagger-resources/**
-
+      - /favicon*
 
 #    whiteList:
 #      - /captcha/**
