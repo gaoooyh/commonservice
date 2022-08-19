@@ -1,7 +1,7 @@
 package com.tools.commonservice.util;
 
 import com.tools.commonservice.exception.ApiException;
-import com.tools.commonservice.exception.Constants;
+import com.tools.commonservice.exception.ConstantsError;
 
 public class UserContextUtil {
     private static final ThreadLocal<String> userThreadLocal = new ThreadLocal<>();
@@ -18,7 +18,7 @@ public class UserContextUtil {
 
     public static void setCurrentError(ApiException ex) {
         errorThreadLocal.set(ex);
-        throw new ApiException(Constants.ERROR_NOT_LOGIN);
+        throw new ApiException(ConstantsError.ERROR_NOT_LOGIN);
     }
 
     public static void cleanThreadLocal() {

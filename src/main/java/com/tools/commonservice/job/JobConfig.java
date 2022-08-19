@@ -3,7 +3,8 @@ package com.tools.commonservice.job;
 import com.tools.commonservice.data.entity.JobEntity;
 import com.tools.commonservice.exception.ApiException;
 import com.tools.commonservice.exception.ErrorCode;
-import com.tools.commonservice.mapper.JobMapper;
+import com.tools.commonservice.mapper.db2.JobCopyMapper;
+import com.tools.commonservice.mapper.mmmydb1.JobMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -22,11 +23,20 @@ public class JobConfig {
     @Resource
     JobMapper jobMapper;
 
+    @Resource
+    JobCopyMapper jobCopyMapper;
+
     /**
      * 项目初始化, 获取所有启用job并添加到map中
      */
     @PostConstruct
     public void init() {
+        List<JobEntity> jobCopyEntityList = jobCopyMapper.getAllJob();
+        for (JobEntity entity : jobCopyEntityList) {
+            log.info("jobEntity: {}", entity);
+        }
+
+
         List<JobEntity> jobEntityList = jobMapper.getAllJob();
         for(JobEntity entity : jobEntityList) {
             ScheduleJob job = toScheduleJob(entity);

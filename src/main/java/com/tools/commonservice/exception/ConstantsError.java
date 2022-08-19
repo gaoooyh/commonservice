@@ -1,7 +1,7 @@
 package com.tools.commonservice.exception;
 
 
-public class Constants {
+public class ConstantsError {
 
     public static final ErrorCode ERROR_SC_BAD_REQUEST = ErrorCode.define(400, "错误请求");
     public static final ErrorCode ERROR_NOT_LOGIN = ErrorCode.define(401, "用户未登录");

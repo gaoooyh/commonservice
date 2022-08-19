@@ -2,9 +2,9 @@ package com.tools.commonservice.filter;
 
 import com.tools.commonservice.config.AccessConfig;
 import com.tools.commonservice.config.RedisService;
+import com.tools.commonservice.data.constant.ConstantsKey;
 import com.tools.commonservice.exception.ApiException;
-import com.tools.commonservice.exception.Constants;
-import com.tools.commonservice.exception.ErrorCode;
+import com.tools.commonservice.exception.ConstantsError;
 import com.tools.commonservice.util.JWTUtil;
 import com.tools.commonservice.util.UserContextUtil;
 import org.slf4j.Logger;
@@ -52,16 +52,16 @@ public class AccessFilter extends GenericFilterBean {
 //        if (accessConfig.getWhiteList() != null) {
 //            for (String whiteUrlPattern : accessConfig.getWhiteList()) {
 //                if (this.pathMatcher.match(whiteUrlPattern, request.getServletPath())) {
-//                    String token = request.getHeader("MyToken");
-//                    if(token == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+//                    String token = request.getHeader(ConstantsKey.TOKEN_HEADER);
+//                    if(token == null) throw new ApiException(ConstantsError.ERROR_NOT_LOGIN);
 //                    String userId = JWTUtil.getUserId(token);
-//                    if(userId == null) throw new ApiException(Constants.ERROR_NOT_LOGIN);
+//                    if(userId == null) throw new ApiException(ConstantsError.ERROR_NOT_LOGIN);
 //
 //                    String tokenInRedis = redisService.get(userId);
 //                    if(tokenInRedis != null && token.equals(tokenInRedis)) {
 //                        redisService.set(userId, token,30*60);
 //                    } else {
-//                        throw new ApiException(Constants.ERROR_NOT_LOGIN);
+//                        throw new ApiException(ConstantsError.ERROR_NOT_LOGIN);
 //                    }
 //
 //                    UserContextUtil.setCurrentUser(userId);
@@ -92,20 +92,26 @@ public class AccessFilter extends GenericFilterBean {
         当未登陆用户故意请求一个不存在的路径时, 提示 401:用户未登陆
         登陆用户请求不存在的路径时, 提示 404:未找到访问的接口
          */
-        String token = request.getHeader("MyToken");
+        String token = request.getHeader(ConstantsKey.TOKEN_HEADER);
         if(token == null) {
-            UserContextUtil.setCurrentError(new ApiException(Constants.ERROR_NOT_LOGIN));
+            UserContextUtil.setCurrentError(new ApiException(ConstantsError.ERROR_NOT_LOGIN));
         }
-        String userId = JWTUtil.getUserId(token);
+
+        String agent = JWTUtil.getKey(token, ConstantsKey.AGENT);
+        if(agent == null || !agent.equals(request.getHeader(ConstantsKey.HTTP_REQUEST_HEADER_USER_AGENT))) {
+            UserContextUtil.setCurrentError(new ApiException(ConstantsError.ERROR_NOT_LOGIN));
+        }
+
+        String userId = JWTUtil.getKey(token, ConstantsKey.USER_ID);
         if(userId == null) {
-            UserContextUtil.setCurrentError(new ApiException(Constants.ERROR_NOT_LOGIN));
+            UserContextUtil.setCurrentError(new ApiException(ConstantsError.ERROR_NOT_LOGIN));
         }
 
         String tokenInRedis = redisService.get(userId);
         if(tokenInRedis != null && token.equals(tokenInRedis)) {
             redisService.set(userId, token,30*60);
         } else {
-            UserContextUtil.setCurrentError(new ApiException(Constants.ERROR_NOT_LOGIN));
+            UserContextUtil.setCurrentError(new ApiException(ConstantsError.ERROR_NOT_LOGIN));
         }
 
         UserContextUtil.setCurrentUser(userId);

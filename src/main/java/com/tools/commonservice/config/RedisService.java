@@ -3,7 +3,6 @@ package com.tools.commonservice.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tools.commonservice.exception.ApiException;
-import com.tools.commonservice.exception.Constants;
 import com.tools.commonservice.exception.ErrorCode;
 import com.tools.commonservice.util.JsonUtils;
 import lombok.extern.slf4j.Slf4j;

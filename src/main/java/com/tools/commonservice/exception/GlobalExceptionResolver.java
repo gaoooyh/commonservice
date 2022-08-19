@@ -56,23 +56,23 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver, Ordere
         if (ex instanceof ApiException) {
             errorCode = ((ApiException)ex).getErrorCode();
         } else if (ex instanceof HttpRequestMethodNotSupportedException) {
-            errorCode = Constants.ERROR_SC_METHOD_NOT_ALLOWED;
+            errorCode = ConstantsError.ERROR_SC_METHOD_NOT_ALLOWED;
         } else if (ex instanceof HttpMediaTypeNotSupportedException) {
-            errorCode = Constants.ERROR_SC_UNSUPPORTED_MEDIA_TYPE;
+            errorCode = ConstantsError.ERROR_SC_UNSUPPORTED_MEDIA_TYPE;
         } else if (ex instanceof HttpMediaTypeNotAcceptableException) {
-            errorCode = Constants.ERROR_SC_NOT_ACCEPTABLE;
+            errorCode = ConstantsError.ERROR_SC_NOT_ACCEPTABLE;
         } else if (!(ex instanceof MissingPathVariableException) && !(ex instanceof ConversionNotSupportedException) && !(ex instanceof HttpMessageNotWritableException)) {
             if (ex instanceof NoHandlerFoundException) {
-                errorCode = Constants.ERROR_SC_NOT_FOUND;
+                errorCode = ConstantsError.ERROR_SC_NOT_FOUND;
             } else if (ex instanceof AsyncRequestTimeoutException) {
-                errorCode = Constants.ERROR_SC_SERVICE_UNAVAILABLE;
+                errorCode = ConstantsError.ERROR_SC_SERVICE_UNAVAILABLE;
             } else if (!(ex instanceof ServletRequestBindingException) && !(ex instanceof TypeMismatchException) && !(ex instanceof HttpMessageNotReadableException) && !(ex instanceof MissingServletRequestPartException) && !(ex instanceof BindException)) {
                 errorCode = ErrorCode.Std_ReqError;
             } else {
-                errorCode = Constants.ERROR_SC_BAD_REQUEST;
+                errorCode = ConstantsError.ERROR_SC_BAD_REQUEST;
             }
         } else {
-            errorCode = Constants.ERROR_SC_INTERNAL_SERVER_ERROR;
+            errorCode = ConstantsError.ERROR_SC_INTERNAL_SERVER_ERROR;
         }
 
         if (ex instanceof ApiException) {

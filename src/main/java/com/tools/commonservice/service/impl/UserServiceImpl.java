@@ -1,11 +1,10 @@
 package com.tools.commonservice.service.impl;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tools.commonservice.common.HttpPage;
 import com.tools.commonservice.config.RedisService;
 import com.tools.commonservice.data.entity.UserEntity;
-import com.tools.commonservice.mapper.UserMapper;
+import com.tools.commonservice.mapper.mmmydb1.UserMapper;
 import com.tools.commonservice.service.UserService;
 import com.tools.commonservice.util.HashUtil;
 import com.tools.commonservice.util.JWTUtil;
@@ -26,7 +25,7 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
 
     @Override
-    public String loginByAccount(String username, String password) {
+    public String loginByAccount(String username, String password, String agent) {
 
         UserEntity user = userMapper.getByName(username);
 
@@ -96,4 +95,17 @@ public class UserServiceImpl implements UserService {
 
         return PageUtil.page(currentPage, pageSize, userList);
     }
+
+    @Override
+    public void createUser(String username, String password) {
+
+        UserEntity user = new UserEntity();
+        user.setUsername(username);
+        String hashPsw = HashUtil.md5(password);
+        user.setPassword(hashPsw);
+        userMapper.insert(user);
+
+    }
+
+
 }

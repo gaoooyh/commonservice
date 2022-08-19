@@ -3,7 +3,7 @@ package com.tools.commonservice.controller;
 
 import com.tools.commonservice.common.HttpResult;
 import com.tools.commonservice.exception.ApiException;
-import com.tools.commonservice.exception.Constants;
+import com.tools.commonservice.exception.ConstantsError;
 import com.tools.commonservice.util.JsonUtils;
 import com.tools.commonservice.util.UserContextUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -45,7 +45,7 @@ public class CustomErrorController implements ErrorController {
 
         log.error(JsonUtils.write(map));
 
-        return HttpResult.setCode(Constants.ERROR_SC_NOT_FOUND);
+        return HttpResult.setCode(ConstantsError.ERROR_SC_NOT_FOUND);
     }
 
 }
