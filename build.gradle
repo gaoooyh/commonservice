@@ -30,8 +30,10 @@ dependencies {
 
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
     implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.2'
+
     implementation 'io.springfox:springfox-swagger-ui:2.9.2'
     implementation 'io.springfox:springfox-swagger2:2.9.2'
+
     implementation 'com.alibaba.csp:sentinel-core:1.8.3'
 
     // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml excel
@@ -43,11 +45,11 @@ dependencies {
     implementation 'org.quartz-scheduler:quartz:2.3.2'
 
     compileOnly 'org.projectlombok:lombok'
-
     annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    
+    testImplementation 'junit:junit:4.13.2'
+
 
 }
 

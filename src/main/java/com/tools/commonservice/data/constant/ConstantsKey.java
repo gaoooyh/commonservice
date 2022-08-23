@@ -8,4 +8,5 @@ public interface ConstantsKey {
     String TOKEN_HEADER = "CS-TOKEN";
 
     String HTTP_REQUEST_HEADER_USER_AGENT = "User-Agent";
+    String HTTP_REQUEST_HEADER_AUTH = "Authorization";
 }

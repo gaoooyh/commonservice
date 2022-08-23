@@ -46,6 +46,9 @@ mybatis-plus:
 
 com:
   access:
+    authInfo:
+      username: username
+      password: passw0rd
     openList:
       - /login/**
       - /v2/api-docs
@@ -54,11 +57,14 @@ com:
       - /webjars/springfox-swagger-ui/**
       - /swagger-resources/**
       - /favicon*
-
-#    whiteList:
-#      - /captcha/**
-#      - /snowflake/**
-#      - /remote/**
-#      - /limit/**
+    authList:
+      - /captcha/**
+      - /remote/**
+      - /limit/**
       - /export/**
-#      - /enum/**
+      - /enum/**
+      - /job/**
+    whiteList:
+      - /snowflake/**
+
+

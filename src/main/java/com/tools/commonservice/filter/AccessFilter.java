@@ -20,10 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 public class AccessFilter extends GenericFilterBean {
     static Logger log = LoggerFactory.getLogger(AccessFilter.class);
@@ -87,6 +84,20 @@ public class AccessFilter extends GenericFilterBean {
             }
         }
 
+        if (accessConfig.getAuthList() != null) {
+            for (String openUrlPattern : accessConfig.getAuthList()) {
+                if (this.pathMatcher.match(openUrlPattern, request.getServletPath())) {
+                    if (checkHeaderAuth(request, accessConfig.getAuthInfo().getUsername(), accessConfig.getAuthInfo().getPassword())) {
+                        chain.doFilter(request, response);
+                        return;
+                    } else {
+                        log.info("req uri " + request.getServletPath() + " auth empty ");
+                        throw new ApiException(ConstantsError.ERROR_NOT_LOGIN);
+                    }
+                }
+            }
+        }
+
         /*
         ErrorController返回信息
         当未登陆用户故意请求一个不存在的路径时, 提示 401:用户未登陆
@@ -126,6 +137,29 @@ public class AccessFilter extends GenericFilterBean {
 //        throw new ApiException(ErrorCode.paramError("无效的访问请求"));
 
 
+    }
+
+    private boolean checkHeaderAuth(HttpServletRequest request, String username, String password) {
+        String auth = request.getHeader("Authorization");
+        if ((auth != null) && (auth.length() > 6)) {
+            String decodedAuth = getFromBASE64(auth.substring(6));
+
+            String[] values = decodedAuth.split(":");
+            return values.length == 2 && values[0].equals(username) && values[1].equals(password);
+        } else {
+            return false;
+        }
+    }
+
+    private String getFromBASE64(String s) {
+        if (s == null)
+            return null;
+        try {
+            byte[] b = Base64.getDecoder().decode(s);
+            return new String(b);
+        } catch (Exception e) {
+            return null;
+        }
     }
 
 
@@ -195,5 +229,8 @@ public class AccessFilter extends GenericFilterBean {
                 }
             }
         }
+
+
+
     }
 }
